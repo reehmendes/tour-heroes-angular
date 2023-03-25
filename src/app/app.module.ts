@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 //sempre que houver o arroba é porque possui diretivas - TODO COMPONENTE TEM QUE ESTAR INSTALADO EM UM MODULO
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
+    HeroDetailComponent,
     //componente que faz parte desse módulo
   ],
   imports: [

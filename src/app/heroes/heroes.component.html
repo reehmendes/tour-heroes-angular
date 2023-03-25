@@ -10,23 +10,5 @@
   </li>
 </ul>
 
-<!-- uso da diretiva ngIf significa que se tiver alguma coisa na variável, ele mostra o conteúdo, ou seja, nesse caso, selectedHero -->
-<div *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div>
-    <span>id: {{ selectedHero.id }} </span>
-  </div>
-  <div>
-    <span>name: {{ selectedHero.name }} </span>
-  </div>
-
-  <div>
-    <label for="name">Hero name:</label>
-    <input
-      id="name"
-      [(ngModel)]="selectedHero.name"
-      placeholder="name"
-      type="text"
-    />
-  </div>
-</div>
+<!-- para fazer uma ligação da propriedade hero é necessário  -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

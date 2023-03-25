@@ -8,16 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent {
-  //criando a primeira propriedade
-  hero: Hero = {
-    id: 1,
-    name: 'Wolverirne',
-  };
-
-  heroes = HEROES; //listagem que possui todos os heróis
-  selectedHero?: Hero; //quando é necessário inicializar uma variável vazia, é necessário utilizar o ?, para que aceite null ou undefined
+  heroes = HEROES;
+  selectedHero?: Hero;
 
   onSelect(hero: Hero): void {
-    this.selectedHero = hero; //this é conhecido para o contexto da classe
+    this.selectedHero = hero;
   }
 }
