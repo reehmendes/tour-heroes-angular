@@ -1,28 +1,22 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
-//sempre que houver o arroba é porque possui diretivas - TODO COMPONENTE TEM QUE ESTAR INSTALADO EM UM MODULO
+import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    //componente que faz parte desse módulo
-  ],
+  declarations: [AppComponent, HeroesComponent, HeroDetailComponent],
   imports: [
     BrowserModule,
     FormsModule,
-    //adiciona os pacotes que foram imporados, do angular ou de outra lib
+    BrowserAnimationsModule,
+    NgxNavbarModule,
   ],
   providers: [],
-  bootstrap: [
-    AppComponent,
-    //modulo iniciado quando é executado o sistema
-  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
