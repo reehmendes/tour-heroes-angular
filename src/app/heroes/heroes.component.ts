@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[] = []; //inicializado como vazio
+  heroes: Hero[] = [];
   selectedHero?: Hero;
 
-  constructor(private heroService: HeroService) {} //injeção do heroService
+  constructor(private heroService: HeroService) {}
   ngOnInit(): void {
     this.getHeroes();
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes)); //atribuindo o valor do heroes ao heroes do componente
   }
 
   onSelect(hero: Hero): void {
