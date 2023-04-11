@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
-import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
@@ -21,7 +25,10 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgxNavbarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
