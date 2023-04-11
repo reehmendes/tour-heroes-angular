@@ -1,0 +1,16 @@
+<div *ngIf="messageService.getMessages().length">
+  <!-- verifica se possui mensagens no serviço | exibindo o bloco apenas se existir mensagens-->
+  <h2>Messages</h2>
+  <button
+    type="button"
+    class="btn btn-warning"
+    (click)="messageService.clear()"
+  >
+    Clear Messages
+  </button>
+
+  <div *ngFor="let message of messageService.getMessages()">
+    <!-- percorrendo todas as mensagens do serviço -->
+    {{ message }}
+  </div>
+</div>

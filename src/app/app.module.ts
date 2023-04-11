@@ -8,8 +8,15 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+import { MessagesComponent } from './messages/messages.component';
+
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent],
+  declarations: [
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
