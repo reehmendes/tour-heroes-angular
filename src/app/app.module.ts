@@ -29,12 +29,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    //modulos do ang material
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatExpansionModule,
     MatTooltipModule,
+    //modulos do projeto
     AppRoutingModule,
+    //modulo para css
     FlexLayoutModule,
   ],
   providers: [],
