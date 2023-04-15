@@ -9,9 +9,18 @@
   >
     <mat-icon>sports_martial_arts</mat-icon>
   </button>
+  <button
+    mat-icon-button
+    aria-label="Dashboard"
+    matTooltip="Dashboard"
+    routerLink="/dashboard"
+  >
+    <mat-icon>dashboard</mat-icon>
+  </button>
 </mat-toolbar>
 <!-- ENTRADA OUTROS COMPONENTES -->
-<div class="content">
+<!-- fxLayoutGat cria a distancia que é solicitante entre os contents -->
+<div class="content" fxLayoutGap="12px">
   <!-- como a rota ta sendo incluída é necessário o RouterOutlet | ele chama a rota que foi adicionada -->
   <router-outlet></router-outlet>
   <app-messages></app-messages>
