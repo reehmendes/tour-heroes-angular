@@ -8,13 +8,17 @@ import { HEROES } from '../mock/mock-heroes';
   providedIn: 'root',
 })
 export class HeroService {
-  //injetando o serviço de mensagem
   constructor(private messageService: MessageService) {}
 
   getHeroes(): Observable<Hero[]> {
     const heroes = of(HEROES);
-    //ao obter a lista de heroes adiciona uma mensagem
     this.messageService.add('HeroService: fetched heroes');
     return heroes;
+  }
+
+  getHero(id: number): Observable<Hero> {
+    const hero = HEROES.find((data) => data.id === id)!; //a exclamação
+    this.messageService.add(`HeroService: fetched hero id ${id}`);
+    return of(hero);
   }
 }
